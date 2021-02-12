@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  rolesaver:
+    container_name: role_saver
+    build: .
+    restart: always
+    ports:
+      - "5544:5544"
+    env_file: .env
+    deploy:
+      resources:
+        limits:
+          memory: 2g
